@@ -42,7 +42,7 @@ body {
 
 #navigation p {
     margin: 10px 0px 10px 20px;
-    text-size-adjust: 100% ;
+    font-size: 20px;
 }
 
 .highlight {
@@ -76,13 +76,14 @@ h3 {
 
 #heroGrid {
     margin: -30px 0px;
+    justify-content: space-between;
     background-color: #E1F4FA;
     display: grid;
     min-height: 650px;
     height: 7vh;
     grid-template-rows: 100%;
-    grid-template-columns: 45% 65%;
-    grid-template-areas: "headline" "headshot"
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "headline headshot"
     ;
 }
 
@@ -90,6 +91,10 @@ h3 {
     grid-area: headline;
 }
 
+#headshot {
+    grid-area: headshot;
+    justify-self: end;
+}
 
 
 
@@ -98,8 +103,7 @@ h3 {
 .more {
     font-size: 20px;
     background-color: #3985AE;
-    margin: 0px;
-    padding: 30px;
+    padding: 30px 30px 30px 10%;
     color: white;
 }
 
@@ -125,13 +129,31 @@ h3 {
 
 
 
-.caseStudies {
+#caseStudies {
+    display: flex;
+    flex-direction: column;
     background-image: url("../images/sec1_bkgd_cs.png");
     width: auto;
-    height: 500px;
-    background-repeat: no-repeat;
-    align-items: center;
+    padding-top: 3rem;
+    height: 700px;
+    align-items: space-between;
+   
 }
+
+#caseHead {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+#cases {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 80px;
+    padding: 10px;
+}
+
 
 
 /* SECTION 2 - QUOTE */
@@ -152,37 +174,63 @@ h3 {
 }
 
 .secTwo {
-    size: 10px;
     padding: 30px;
     align: center;
     color: white;
 }
 
-/* FOOTER _ REDO */
+
+
+/* SECTION 2 - LOGOS */
+
+#logoFolio {
+    display: block;
+    padding-top: 3rem;
+    background-image: url("../images/fter_bkgd.png");
+    width: auto;
+    height: 550px;
+    align-items: center;
+    margin-top: -30px;
+    border-bottom: solid 3px #0076BE;
+   
+}
+
+#logoHead {
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+}
+
+#logoCards {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 70px;
+    padding: 10px;
+}
+
+/* FOOTER */
+
+
+
 
 #footer {
     display: flex;
     justify-content: space-between;
-    margin: -30px 0%;
+    margin-right: 30px;
     background-color: white;
 }
 
-#logoName {
-    width: 25%;
-    margin: 0px ;
-    padding-bottom: 10px;
-    display: block;
-    align-items: flex-end;
-}
 
 
 
 #footerNav {
     display: inline-flex;
-    align-items: end;
+    align-items: center;
     justify-content: space-between;
-    width: 20%;
+    width: 30%;
     padding: 40px;
+
 }
 
 .footerLogo {
@@ -196,16 +244,17 @@ h3 {
 #footerNav p {
     margin: 30px 0px 15px 0px;
     display: flex;
-    align: center;
+    align-items: end;
+    font-size: 20px;
 }
 
 
-.words {
-    display: flex;
-    flex-direction: row;
-}
 .icons {
     width: auto;
     height: 10%;
     padding: 10px;
 }
+
+
+
+/* FOOTER _ REDO 2 */
