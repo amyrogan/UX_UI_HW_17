@@ -18,7 +18,7 @@ body {
 .left {
     display: flex;
     width: 35%;
-    margin-top: 26px;
+    margin-top: 30px;
 }
 
 .left h3 {
@@ -45,54 +45,42 @@ body {
     font-size: 20px;
 }
 
-#hamburger {
-    display: none;
-}
-
+.highlight {
+    color: #FF6200;
+    font-weight: 600;
+  }
 
 /* TYPOGRAPHY */
 
 h1 {
-    font-size: 4.5vw;
+    font-size: 60px;
     margin: 40px 40px;
-    margin-top: 80px;
+    margin-top: 120px;
     color: #0076BE;
 }
 
 h2 {
-    font-size: 2.25vw;
+    font-size: 25px;
     font-weight: 400;
     margin: 20px 40px;
     color: #0076BE;
 }
 
 h3 {
-    font-size: 2.25vw;
+    font-size: 20px;
     font-weight: 400;
 }
 
-h4 {
-    font-size: 25px;
-    font-weight: 400;
-    margin: 0px;
-}
 
-h5 {
-    font-size: 15px;
-    font-weight: 400;
-    margin: 2px;
-}
-
-
-
-/* HERO */
+/* HERO _ REDO */
 
 #heroGrid {
     margin: -30px 0px;
     justify-content: space-between;
     background-color: #E1F4FA;
     display: grid;
-    align-content: flex-end;
+    min-height: 650px;
+    height: 7vh;
     grid-template-rows: 100%;
     grid-template-columns: 50% 50%;
     grid-template-areas: "headline headshot"
@@ -106,8 +94,6 @@ h5 {
 #headshot {
     grid-area: headshot;
     justify-self: end;
-    align-items: flex-end;
-    margin-top: 10px;
 }
 
 
@@ -118,7 +104,6 @@ h5 {
     font-size: 20px;
     background-color: #3985AE;
     padding: 30px 30px 30px 10%;
-    margin-top: -50px;
     color: white;
 }
 
@@ -127,15 +112,12 @@ h5 {
 #caseGrid {
     margin: -30px 0px;
     background-repeat: none;
-    background-image: url("../images/sec1_bkgd_cs.png");
     display: grid;
     min-height: 650px;
     height: 7vh;
     grid-template-rows: 30% 70%;
-    grid-template-columns: 100%;
-    grid-template-areas: 
-    "caseHead"
-    "cases";
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "caseHeader" "caseHeader";
 
     ;
 }
@@ -145,44 +127,31 @@ h5 {
     size: 400px;
 }
 
-#casesVert {
-    display: none;
-}
+
 
 #caseStudies {
     display: flex;
     flex-direction: column;
     background-image: url("../images/sec1_bkgd_cs.png");
     width: auto;
-    padding-top: 50px;
-    height: 30%;
+    padding-top: 3rem;
+    height: 700px;
     align-items: space-between;
    
 }
 
 #caseHead {
-    grid-area: caseHead;
     display: flex;
     justify-content: center;
     margin: 0px;
 }
 
-.responsiveCS {
-    width: 120%;
-    max-width: 350px;
-    height: auto;
-}
-
 #cases {
-    grid-area: cases;
-    size-adjust: ;
-    width: auto;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: auto;
-    margin: 2rem 4rem 5rem 4rem ;
-    padding: 0px;
+    margin: 80px;
+    padding: 10px;
 }
 
 
@@ -205,15 +174,9 @@ h5 {
 }
 
 .secTwo {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 30px 60px 30px;
-    justify-content: center;
+    padding: 30px;
+    align: center;
     color: white;
-}
-
-.secTwo h3 {
-    margin: 0px;
 }
 
 
@@ -256,276 +219,42 @@ h5 {
     justify-content: space-between;
     margin-right: 30px;
     background-color: white;
-    margin-top: 30px;
 }
+
+
 
 
 #footerNav {
     display: inline-flex;
     align-items: center;
-    justify-content: flex-end;
-    width: 300px;
-    margin: 0px 0px 0px 0px;
-    padding: 0px;
+    justify-content: space-between;
+    width: 30%;
+    padding: 40px;
 
 }
 
 .footerLogo {
     display: flex;
     justify-content: flex-start;
-    margin: 0px;
-    padding: 40px;
-
-}
-
-
-#footName {
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    justify-content: start;
-    margin: 0px 0px 0px 10px;
-    margin-top: 0px;
-}
-
-.icons {
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 180px;
-    margin: 0px;
-    padding: 0px;
-}
-
-/* TYPE */
-
-#footerNav p {
-    margin: 30px 20px 15px 0px;
-    display: flex;
-    align-items: flex-end;
-    font-size: 20px;
-}
-
-
-
-
-
-
-/* RESPONSIVE ELEMENTS */
-
-@media only screen and (max-width: 675px) {
-
-    #navigation {
-        display: none;
-    }    
-    #navBar {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: 
-        "none center center hamburger"
-        "left left left left";
-        margin: 30px 0px;
-        padding: 10px;
-        height: 60px;
-        align-items: center;
-        
-    }
-
-    .center {
-        grid-area: center;
-        width: 100%;
-        padding: 5px;
-        order: -1;
-        
-    }
-
-    .left {
-        grid-area: left;
-        display: flex;
-        margin: -5px;
-        padding: 0px;
-        justify-content: center;
-        width: auto;
-    }
-
-    #hamburger {
-        grid-area: hamburger;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        height: fit-content;
-        margin-right: 15px;
-        padding: -30;
-        order: -0;
-    }
-
-    .none {
-        grid-area: none;
-    }
-
-    #heroGrid {
-        margin: 0px;
-        margin-top: 48px;
-        align-content: flex-end;
-        justify-content: flex-end;
-        background-color: #E1F4FA;
-        display: grid;
-        grid-template-rows: 45% 55%;
-        grid-template-columns: 100%;
-        grid-template-areas: "headline" "headshot"
-        ;
-    }
-
-    #headline {
-        
-
-    }
-
-    #headshot {
-
-
-    }
-
-    
-    h1 {
-        font-size: 8vw;
-        margin: 30px 40px;
-        margin-top: 50px;
-        color: #0076BE;
-    }
-    
-    h2 {
-        font-size: 5vw;
-        font-weight: 400;
-        margin: 20px 40px;
-        color: #0076BE;
-    }
-
-    h3 {
-        font-size: 5vw;
-        font-weight: 400;
-    }
-    
-
-
-    #caseStudies {
-        display: flex;
-        flex-direction: column;
-        background-image: url("../images/sec1_bkgd_cs.png");
-        width: auto;
-        padding: 3rem 0rem 3rem .5rem;
-        height: auto;
-        align-items: space-evenly;
-       
-    }
-
-    .responsiveCS {
-        width: 80vw;
-        height: auto;
-    }
-
-    .responsiveLd {
-        width: 70vw;
-        max-width:300px;
-        height: auto;
-    }
-
-    
-    #casesVert {
-        display: flex;
-        width: auto;
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-        align-content: space-between;
-        margin: 30px 10px 20px 10px;
-        padding: 0px;
-        
-    }
-
-    #cases {
-        display: none;
-    }
-
-    .amyFeature {
-        background-color: #3985AE;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0px;
-        padding: 0px;
-        flex-wrap: nowrap;
-    }
-
-
-.more {
-    font-size: 20px;
-    background-color: #3985AE;
-    padding: 30px 30px 30px 10%;
-    margin-top: -10px;
-    color: white;
-}
-
-#footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 0px;
-    background-color: white;
-}
-
-
-#footerNav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 200px;
-    margin: 20px;
-    padding: 0px;
-    order: -1
-
-}
-
-.footerLogo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0px;
+    margin-top: 20px;
     padding: 40px;
 
 }
 
 #footerNav p {
-    margin: 0px;
+    margin: 30px 0px 15px 0px;
     display: flex;
-    align-items: center;
+    align-items: end;
     font-size: 20px;
 }
 
 
 .icons {
-    width: 120px;
-    height: 40%;
-    margin: 5px;
-    padding: 0px;
-}
-
-#footName {
-    margin: 0px 0px 0px 0px;
-    align-items: center;
-}
-
-h5 {
-    text-align: center;
-    margin: 0px;
+    width: auto;
+    height: 10%;
+    padding: 10px;
 }
 
 
 
-
-
-}
+/* FOOTER _ REDO 2 */
